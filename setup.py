@@ -5,7 +5,7 @@ setup(
     description='Custom Okta Resources for AWS Cloudformation',
     author='Ben Waters',
     author_email='bsawyerwaters@gmail.com',
-    url="https://github.com/cloudtools/troposphere",
+    url="https://github.com/thebenwaters/tropokta",
     license="MIT",
     packages=['tropokta'],
     install_requires=[

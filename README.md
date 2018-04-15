@@ -47,4 +47,7 @@ user = t.add_resource(OktaUser(
 print(t.to_json())
 ```
 
+TO DO
+---
+[] Tests
 
