@@ -14,7 +14,7 @@ Follow online instructions on generating an Okta API Token
 ```
 # Replace YOUR_S3_ARTIFACTS_BUCKET
 aws cloudformation package --template-file template.yaml --output-template-file cfn-transformed-template.yaml --s3-bucket YOUR_S3_ARTIFACTS_BUCKET
-aws cloudformation deploy --template-file ./cfn-transformed-template.yaml --stack-name example-logs-processor --capabilities CAPABILITY_IAM
+aws cloudformation deploy --template-file ./cfn-transformed-template.yaml --stack-name okta-cf-resource
 ```
 
 Now you have
