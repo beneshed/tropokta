@@ -33,6 +33,8 @@ If you install tropokta with
 
 ```
 python setup.py install
+# or
+pip install tropokta
 ```
 
 You can do the following within troposphere
