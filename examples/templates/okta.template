@@ -1,0 +1,43 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Okta Test",
+  "Resources": {
+    "TestUser": {
+      "Type": "Custom::OktaUser",
+      "Version": "1.0",
+      "Properties": {
+        "ServiceToken": "arn:aws:lambda:REGION:ACCOUNTID:function:okta_cf_resource",
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "email+101@gmail.com",
+        "login": "email+101@gmail.com"
+      }
+    },
+    "TestGroup": {
+      "Type": "Custom::OktaGroup",
+      "Version": "1.0",
+      "Properties": {
+        "ServiceToken": "arn:aws:lambda:REGION:ACCOUNTID:function:okta_cf_resource",
+        "name": "Test Group",
+        "description": "Foo bar"
+      }
+    },
+    "UserInGroup": {
+      "Type": "Custom::OktaUserGroupAttachment",
+      "DependsOn": [
+        "TestUser",
+        "TestGroup"
+      ],
+      "Version": "1.0",
+      "Properties": {
+        "ServiceToken": "arn:aws:lambda:REGION:ACCOUNTID:function:okta_cf_resource",
+        "userId": {
+          "Ref": "TestUser"
+        },
+        "groupId": {
+          "Ref": "TestGroup"
+        }
+      }
+    }
+  }
+}
