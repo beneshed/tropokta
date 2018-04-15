@@ -1,6 +1,11 @@
 # tropokta
 Custom AWS Cloudformation Resource for Okta Users and Groups
 
+_CAUTION_
+
+* This is ALPHA and has only been testing on a developer instance of Okta and a test AWS account *
+_DO NOT USE IN PRODUCTION WITHOUT TESTING_
+
 Install
 ---
 To just use as a custom resource

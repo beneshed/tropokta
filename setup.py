@@ -2,6 +2,7 @@ from setuptools import setup
 
 setup(
     name='tropokta',
+    versoin='0.0.1-alpha',
     description='Custom Okta Resources for AWS Cloudformation',
     author='Ben Waters',
     author_email='bsawyerwaters@gmail.com',
