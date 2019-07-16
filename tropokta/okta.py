@@ -6,10 +6,10 @@ class OktaUser(AWSObject):
 
     props = {
         'ServiceToken': (basestring, True),
-        'firstName': (baseString, True),
-        'lastName': (baseString, True),
-        'email': (baseString, True),
-        'login': (baseString, True)
+        'firstName': (basestring, True),
+        'lastName': (basestring, True),
+        'email': (basestring, True),
+        'login': (basestring, True)
     }
 
 
